@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCSS Mixin デモ</title>
-  </head>
-  <body>
-    <div class="container">
+import "./style.scss";
+import javascriptLogo from "./javascript.svg";
+import viteLogo from "/vite.svg";
+import { setupCounter } from "./counter.js";
+
+document.querySelector("#app").innerHTML = `
+      <div class="container">
       <h1>SCSS Mixin デモ</h1>
 
       <section class="button-demo">
@@ -46,5 +44,6 @@
         </p>
       </section>
     </div>
-  </body>
-</html>
+`;
+
+setupCounter(document.querySelector("#counter"));
